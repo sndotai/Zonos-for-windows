@@ -126,13 +126,13 @@ catch {
         Write-Host "Downlaod finished|下载完成！" -ForegroundColor Green
         Write-Host "Installing espeak-ng msi|安装espeak-ng模块中..." -ForegroundColor Green
         # 使用 Start-Process 安装 MSI 文件（静默安装，记录日志）
-        Start-Process -FilePath "msiexec.exe" -ArgumentList "/i `"$downloadPath`" /qn /l*v `"$logFile`"" -Wait -PassThru
+        Start-Process -FilePath "msiexec.exe" -ArgumentList "/i `"$downloadPath`" /qn /l*v `"$logFile`"" -Wait -PassThru -Verb RunAs
         try {
             espeak-ng --version
             Write-Output "espeak-ng Install finished| espeak-ng安装成功" -ForegroundColor Green
         }
         catch {
-            Write-Output "espeak-ng install failed, check log $logFile|安装uv模块失败。请查看日志文件:$logFile"  -ForegroundColor Red
+            Write-Output "espeak-ng install failed, check log $logFile|安装espeak-ng模块失败。请查看日志文件:$logFile"  -ForegroundColor Red
         }
     }
     catch {
