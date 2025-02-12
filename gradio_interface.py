@@ -369,4 +369,4 @@ def build_interface():
 if __name__ == "__main__":
     demo = build_interface()
     share = getenv("GRADIO_SHARE", "False").lower() in ("true", "1", "t")
-    demo.launch(server_name="127.0.0.1", share=share)
+    demo.launch(server_name="127.0.0.1", inbrowser=True, share=share)
