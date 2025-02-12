@@ -68,6 +68,9 @@ This should produce a `sample.wav` file in your project root directory.
 
 _For repeated sampling we highly recommend using the gradio interface instead, as the minimal example needs to load the model every time it is run._
 
+### Windows Gradio interface (recommended)
+Powershell run with `2、run_gui.ps1` (right click then choose `use powershell run`)
+
 ## Features
 
 - Zero-shot TTS with voice cloning: Input desired text and a 10-30s speaker sample to generate high quality TTS output
@@ -83,6 +86,16 @@ _For repeated sampling we highly recommend using the gradio interface instead, a
 **At the moment this repository only supports Linux systems (preferably Ubuntu 22.04/24.04) with recent NVIDIA GPUs (3000-series or newer, 6GB+ VRAM).**
 
 See also [Docker Installation](#docker-installation)
+
+## Windows Installation
+  Give unrestricted script access to powershell so venv can work:
+
+- Open an administrator powershell window
+- Type `Set-ExecutionPolicy Unrestricted` and answer A
+- Close admin powershell window
+
+### One-click:
+Powershell run with `1、install-uv-qinglong.ps1` (right click then choose `use powershell run`) auto install in one-clik
 
 #### System dependencies
 
