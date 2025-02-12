@@ -192,7 +192,7 @@ def build_interface():
             with gr.Column():
                 model_choice = gr.Dropdown(
                     choices=["Zyphra/Zonos-v0.1-transformer", "Zyphra/Zonos-v0.1-hybrid"],
-                    value="Zyphra/Zonos-v0.1-transformer",
+                    value="Zyphra/Zonos-v0.1-hybrid",
                     label="Zonos Model Type",
                     info="Select the model variant to use.",
                 )
@@ -369,4 +369,4 @@ def build_interface():
 if __name__ == "__main__":
     demo = build_interface()
     share = getenv("GRADIO_SHARE", "False").lower() in ("true", "1", "t")
-    demo.launch(server_name="0.0.0.0", server_port=7860, share=share)
+    demo.launch(server_name="127.0.0.1", share=share)
