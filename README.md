@@ -97,6 +97,8 @@ See also [Docker Installation](#docker-installation)
 ### One-click:
 Powershell run with `1、install-uv-qinglong.ps1` (right click then choose `use powershell run`) auto install in one-clik
 
+## Linux Installation
+
 #### System dependencies
 
 Zonos depends on the eSpeak library phonemization. You can install it on Ubuntu with the following command:
