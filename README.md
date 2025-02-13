@@ -94,6 +94,10 @@ See also [Docker Installation](#docker-installation)
 - Type `Set-ExecutionPolicy Unrestricted` and answer A
 - Close admin powershell window
 
+### CUDA
+This repo needs cuda 12.4
+https://developer.nvidia.com/cuda-12-4-1-download-archive?target_os=Windows&target_arch=x86_64
+
 ### One-click:
 Powershell run with `1、install-uv-qinglong.ps1` (right click then choose `use powershell run`) auto install in one-clik
 
