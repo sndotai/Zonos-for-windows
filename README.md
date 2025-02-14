@@ -8,6 +8,12 @@
             object-position: center top;">
 </div>
 
+<div align="center">
+  <a href="https://discord.gg/gTW9JwST8q" target="_blank">
+    <img src="https://img.shields.io/badge/Join%20Our%20Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord">
+  </a>
+</div>
+
 ---
 
 Zonos-v0.1 is a leading open-weight text-to-speech model trained on more than 200k hours of varied multilingual speech, delivering expressiveness and quality on par with—or even surpassing—top TTS providers.
@@ -77,7 +83,7 @@ Powershell run with `2、run_gui.ps1` (right click then choose `use powershell r
 - Audio prefix inputs: Add text plus an audio prefix for even richer speaker matching. Audio prefixes can be used to elicit behaviours such as whispering which can otherwise be challenging to replicate when cloning from speaker embeddings
 - Multilingual support: Zonos-v0.1 supports English, Japanese, Chinese, French, and German
 - Audio quality and emotion control: Zonos offers fine-grained control of many aspects of the generated audio. These include speaking rate, pitch, maximum frequency, audio quality, and various emotions such as happiness, anger, sadness, and fear.
-- Fast: our model runs with a real-time factor of ~2x on an RTX 4090
+- Fast: our model runs with a real-time factor of ~2x on an RTX 4090 (i.e. generates 2 seconds of audio per 1 second of compute time)
 - Gradio WebUI: Zonos comes packaged with an easy to use gradio interface to generate speech
 - Simple installation and deployment: Zonos can be installed and deployed simply using the docker file packaged with our repository.
 
@@ -93,6 +99,13 @@ See also [Docker Installation](#docker-installation)
 - Open an administrator powershell window
 - Type `Set-ExecutionPolicy Unrestricted` and answer A
 - Close admin powershell window
+
+### CUDA
+This repo needs cuda 12.4
+https://developer.nvidia.com/cuda-12-4-1-download-archive?target_os=Windows&target_arch=x86_64
+
+### MSVC
+The [VS studio 2022](https://visualstudio.microsoft.com/vs/) with C++ compile needs.
 
 ### One-click:
 Powershell run with `1、install-uv-qinglong.ps1` (right click then choose `use powershell run`) auto install in one-clik
@@ -151,8 +164,8 @@ cd Zonos
 docker compose up
 
 # Or for development you can do
-docker build -t Zonos .
-docker run -it --gpus=all --net=host -v /path/to/Zonos:/Zonos -t Zonos
+docker build -t zonos .
+docker run -it --gpus=all --net=host -v /path/to/Zonos:/Zonos -t zonos
 cd /Zonos
 python sample.py # this will generate a sample.wav in /Zonos
 ```
