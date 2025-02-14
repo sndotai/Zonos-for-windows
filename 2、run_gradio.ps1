@@ -28,6 +28,7 @@ $Env:TORCH_HOME = $PSScriptRoot + "\torch"
 $Env:XFORMERS_FORCE_DISABLE_TRITON = "1"
 $Env:CUDA_HOME = "${env:CUDA_PATH}"
 $Env:PHONEMIZER_ESPEAK_LIBRARY = "C:\Program Files\eSpeak NG\libespeak-ng.dll"
+$Env:GRADIO_HOST = "127.0.0.1"
 
 python -m gradio_interface
 
