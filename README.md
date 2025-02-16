@@ -111,7 +111,7 @@ This repo needs cuda 12.4
 https://developer.nvidia.com/cuda-12-4-1-download-archive?target_os=Windows&target_arch=x86_64
 
 ### MSVC
-The [VS studio 2022](https://visualstudio.microsoft.com/vs/) with C++ compile needs.
+The [VS studio 2022](https://visualstudio.microsoft.com/vs/) with **C++ compiler** needs.
 
 ### One-click:
 Powershell run with `1、install-uv-qinglong.ps1` (right click then choose `use powershell run`) auto install in one-clik
