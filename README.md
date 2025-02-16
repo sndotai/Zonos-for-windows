@@ -64,16 +64,16 @@ wavs = model.autoencoder.decode(codes).cpu()
 torchaudio.save("sample.wav", wavs[0], model.autoencoder.sampling_rate)
 ```
 
-### Gradio interface (recommended)
+~~### Gradio interface (recommended)~~
 
-```bash
+~~```bash
 uv run gradio_interface.py
-# python gradio_interface.py
-```
+~# python gradio_interface.py
+~~```~~
 
-This should produce a `sample.wav` file in your project root directory.
+~~This should produce a `sample.wav` file in your project root directory.~~
 
-_For repeated sampling we highly recommend using the gradio interface instead, as the minimal example needs to load the model every time it is run._
+~~_For repeated sampling we highly recommend using the gradio interface instead, as the minimal example needs to load the model every time it is run._~~
 
 ### Windows Gradio interface (recommended)
 Powershell run with `2、run_gui.ps1` (right click then choose `use powershell run`)
