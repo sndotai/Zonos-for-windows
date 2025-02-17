@@ -211,7 +211,7 @@ def build_interface():
             with gr.Column():
                 model_choice = gr.Dropdown(
                     choices=supported_models,
-                    value=supported_models[1],
+                    value=supported_models[0],
                     label="Zonos Model Type",
                     info="Select the model variant to use.",
                 )
