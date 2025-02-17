@@ -64,16 +64,16 @@ wavs = model.autoencoder.decode(codes).cpu()
 torchaudio.save("sample.wav", wavs[0], model.autoencoder.sampling_rate)
 ```
 
-### Gradio interface (recommended)
+~~### Gradio interface (recommended)~~
 
-```bash
+~~```bash
 uv run gradio_interface.py
-# python gradio_interface.py
-```
+~# python gradio_interface.py
+~~```~~
 
-This should produce a `sample.wav` file in your project root directory.
+~~This should produce a `sample.wav` file in your project root directory.~~
 
-_For repeated sampling we highly recommend using the gradio interface instead, as the minimal example needs to load the model every time it is run._
+~~_For repeated sampling we highly recommend using the gradio interface instead, as the minimal example needs to load the model every time it is run._~~
 
 ### Windows Gradio interface (recommended)
 Powershell run with `2、run_gui.ps1` (right click then choose `use powershell run`)
@@ -97,6 +97,8 @@ Powershell run with `2、run_gui.ps1` (right click then choose `use powershell r
 
 Note: Zonos can also run on CPU provided there is enough free RAM. However, this will be a lot slower than running on a dedicated GPU, and likely won't be sufficient for interactive use.
 
+For experimental windows support check out [this fork](https://github.com/sdbds/Zonos-for-windows).
+
 See also [Docker Installation](#docker-installation)
 
 ## Windows Installation
@@ -111,7 +113,7 @@ This repo needs cuda 12.4
 https://developer.nvidia.com/cuda-12-4-1-download-archive?target_os=Windows&target_arch=x86_64
 
 ### MSVC
-The [VS studio 2022](https://visualstudio.microsoft.com/vs/) with C++ compile needs.
+The [VS studio 2022](https://visualstudio.microsoft.com/vs/) with **C++ compiler** needs.
 
 ### One-click:
 Powershell run with `1、install-uv-qinglong.ps1` (right click then choose `use powershell run`) auto install in one-clik
