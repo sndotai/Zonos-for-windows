@@ -184,6 +184,7 @@ def generate_audio(
         batch_size=1,
         sampling_params=dict(min_p=min_p),
         callback=update_progress,
+        disable_torch_compile=True if "transformer" in model_choice else False,
     )
 
     wav_out = selected_model.autoencoder.decode(codes).cpu().detach()
