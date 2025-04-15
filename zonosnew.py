@@ -1,5 +1,11 @@
 import os
 print("os done")
+import sys
+print("sys done")
+# Ensure current directory (or project root) is on PYTHONPATH
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+if BASE_DIR not in sys.path:
+    sys.path.insert(0, BASE_DIR)
 import torch
 print("import torch done")
 import torchaudio
